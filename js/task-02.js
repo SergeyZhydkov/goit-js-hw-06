@@ -1,6 +1,6 @@
 const ingredients = ["Potatoes", "Mushrooms", "Garlic", "Tomatos", "Herbs", "Condiments"];
 // console.log(ingredients);
-const list = document.querySelector("ul#ingredients");
+const list = document.querySelector("#ingredients");
 const potatoes = document.createElement("li");
 potatoes.textContent = "Potatoes";
 
@@ -22,5 +22,7 @@ condiments.textContent = "Condiments";
 // console.log(herbs);
 // console.log(condiments);
 
-list.append(potatoes, mushrooms, garlic, tomatos, herbs, condiments);
+const markup = ingredients.map((ingredient) => `<li class="item">${ingredient}</li>`).join("");
+// console.log(markup);
+list.innerHTML = markup;
 console.log(list);
